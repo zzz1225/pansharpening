@@ -1,0 +1,27 @@
+# ===============================
+# NPPC Pansharpening config
+# ===============================
+
+
+# 数据归一化比例（WV3 为 11-bit）
+ratio: 2047.0
+
+# 光谱通道数
+bands_ms: 8
+ms_target_channel: 8
+
+# 三阶段 epoch（Baseline / NPPC / Fine-tune）
+epochs: [5, 5, 5]
+
+# Batch & Loader
+batch_size: 2
+num_workers: 4
+subset_ratio: 0.3
+
+# 网络结构
+n_dirs: 3
+base_channels: 64
+
+# 输出与可视化
+out_dir: "./outputs"
+show_fig: True
